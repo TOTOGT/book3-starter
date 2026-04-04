@@ -22,7 +22,7 @@ build/
 *.npz
 *.mat
 
-# LaTeX
+# LaTeX build artifacts
 *.aux
 *.log
 *.out
@@ -32,7 +32,8 @@ build/
 *.synctex.gz
 *.bbl
 *.blg
-*.pdf
+# PDFs that are LaTeX build output (in a build/ subdirectory)
+build/*.pdf
 
 # OS
 .DS_Store
