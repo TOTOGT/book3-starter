@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lessons & Assignments · Hour House · Principia Orthogona</title>
+<meta name="description" content="Hour House ESL — adult English language lessons and assignments grounded in the AXLE / Principia Orthogona framework. Newark, NJ · 2026.">
+<style>
+  :root {
+    --navy:  #1a2744; --gold:  #c9a84c; --cream: #faf7f0; --smoke: #f0ece4;
+    --mid:   #3a4f7a; --rule:  #8a7340; --text:  #1c1c1c; --green: #2d5a27;
+    --light: #e8e2d4; --amber: #fff8e1; --amber-border: #f9a825;
+    --parchment: #f4ead5; --ink: #3b2a1a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Georgia', serif; color: var(--text); background: var(--cream); }
+  nav {
+    background: var(--navy); padding: 0.75rem 2rem;
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .nav-logo { color: var(--gold); font-weight: bold; font-size: 0.95rem; letter-spacing: 0.1em; text-decoration: none; font-family: sans-serif; }
+  .nav-links { display: flex; gap: 1.2rem; list-style: none; flex-wrap: wrap; }
+  .nav-links a { color: #ccc; text-decoration: none; font-size: 0.85rem; font-family: sans-serif; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .hero { background: var(--navy); color: white; padding: 3.5rem 2rem 3rem; text-align: center; }
+  .hero-eyebrow { font-family: sans-serif; font-size: 0.75rem; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem; }
+  .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); color: white; margin-bottom: 0.5rem; line-height: 1.2; }
+  .hero-sub { color: var(--gold); font-style: italic; font-size: 1.05rem; margin-bottom: 0.6rem; }
+  .gold-rule { width: 60px; height: 2px; background: var(--gold); margin: 1rem auto; }
+  .hero-desc { max-width: 700px; margin: 0 auto; color: #bbb; font-size: 0.95rem; line-height: 1.8; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; }
+  .section-title {
+    font-family: sans-serif; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--rule); margin-bottom: 0.4rem;
+  }
+  .section-rule { width: 40px; height: 2px; background: var(--gold); margin-bottom: 1.5rem; }
+  .lessons-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem; margin-bottom: 3rem;
+  }
+  .lesson-card {
+    background: white; border: 1px solid var(--light);
+    padding: 0; overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .lesson-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(26, 39, 68, 0.08); }
+  .lesson-card-header {
+    background: var(--navy); color: white; padding: 1rem 1.3rem;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .lesson-card-num {
+    font-family: sans-serif; font-size: 0.72rem; font-weight: bold; letter-spacing: 0.2em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .lesson-card-meta {
+    font-family: sans-serif; font-size: 0.68rem; color: #bbb; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .lesson-card-body { padding: 1.3rem 1.5rem 0.5rem; flex: 1; }
+  .lesson-card-body h2 {
+    font-size: 1.35rem; color: var(--navy); line-height: 1.25; margin-bottom: 0.3rem;
+  }
+  .lesson-card-sub {
+    color: var(--rule); font-style: italic; font-size: 0.92rem; margin-bottom: 0.9rem;
+  }
+  .lesson-card-desc { font-size: 0.92rem; line-height: 1.65; color: #333; margin-bottom: 1rem; }
+  .lesson-card-tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem;
+  }
+  .tag {
+    background: var(--smoke); border: 1px solid var(--light);
+    padding: 0.18rem 0.55rem; font-family: sans-serif; font-size: 0.7rem;
+    color: var(--mid); letter-spacing: 0.04em;
+  }
+  .tag.gold { background: var(--amber); border-color: var(--amber-border); color: #b04a00; }
+  .lesson-card-footer {
+    padding: 0.8rem 1.5rem 1.3rem;
+    border-top: 1px solid var(--light); margin-top: 0.3rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .lesson-card-link {
+    color: var(--navy); text-decoration: none; font-family: sans-serif; font-weight: bold;
+    font-size: 0.85rem; letter-spacing: 0.04em;
+  }
+  .lesson-card-link:hover { color: var(--gold); }
+  .lesson-card-source { font-size: 0.78rem; color: #888; font-style: italic; }
+  /* Companion-apparatus strip (Zenodo, Lean, AXLE thread, etc.) */
+  .lesson-card-companions {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin: 0 0 0.9rem; padding: 0.5rem 0.7rem;
+    background: var(--smoke); border: 1px dashed #c9c1aa;
+    font-family: sans-serif; font-size: 0.76rem;
+  }
+  .lesson-card-companions a {
+    color: var(--mid); text-decoration: none; padding: 0.12rem 0.45rem;
+    border: 1px solid transparent; transition: all 0.15s;
+  }
+  .lesson-card-companions a:hover { border-color: var(--mid); color: var(--navy); background: white; }
+  .lesson-card-companions a.placeholder {
+    color: #999; font-style: italic; border: 1px dotted #ccc; pointer-events: none;
+  }
+  .lesson-card-companions a.placeholder::after { content: " · TODO"; color: #c45000; font-size: 0.65rem; }
+  /* Coming-soon ghost card */
+  .lesson-card.ghost { background: var(--smoke); border-style: dashed; opacity: 0.85; }
+  .lesson-card.ghost .lesson-card-header { background: #555; }
+  .lesson-card.ghost .lesson-card-num { color: #ddd; }
+  /* Intro / what-is-this strip */
+  .intro-strip {
+    background: var(--parchment); border: 1px solid #c9a37a;
+    padding: 1.5rem 1.8rem; margin-bottom: 2.5rem; color: var(--ink); line-height: 1.7;
+    position: relative;
+  }
+  .intro-strip::before {
+    content: "✒"; position: absolute; top: -10px; left: 14px;
+    background: var(--parchment); padding: 0 6px; color: var(--rule); font-size: 1rem;
+  }
+  .intro-strip h2 {
+    font-family: 'Georgia', serif; font-size: 1.15rem; color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .intro-strip p { font-size: 0.95rem; }
+  .intro-strip a { color: var(--mid); }
+  /* Fundraiser */
+  .fundraiser {
+    background: #e8f5e9; border: 2px solid var(--green);
+    padding: 1.4rem 1.8rem; margin: 2rem 0; text-align: center;
+  }
+  .fundraiser h3 { color: var(--green); font-family: sans-serif; font-size: 1rem; margin-bottom: 0.4rem; }
+  .fundraiser p { font-size: 0.92rem; color: #1b5e20; line-height: 1.6; margin-bottom: 0.5rem; }
+  .fundraiser a { color: var(--green); font-weight: bold; font-family: sans-serif; text-decoration: none; }
+  .fundraiser a:hover { text-decoration: underline; }
+  /* Copyright */
+  .copyright-strip {
+    background: var(--smoke); padding: 0.8rem 1.5rem; margin-top: 2rem;
+    font-size: 0.8rem; color: #777; font-family: sans-serif; border-top: 1px solid var(--light); text-align: center;
+  }
+  .copyright-strip a { color: var(--mid); }
+  .doi-badge { display: inline-block; background: #eef2f8; border: 1px solid #b0c4de; padding: 0.2rem 0.55rem; font-family: monospace; font-size: 0.78rem; color: var(--mid); margin-left: 0.4rem; text-decoration: none; }
+  .doi-badge:hover { background: var(--light); }
+  footer {
+    background: var(--navy); color: #888; padding: 2rem; text-align: center;
+    font-size: 0.78rem; font-family: sans-serif; line-height: 1.7;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../../index.html" class="nav-logo">← PRINCIPIA ORTHOGONA</a>
+  <ul class="nav-links">
+    <li><a href="../../portal.html">Student Portal</a></li>
+    <li><a href="../../index.html#axle">AXLE</a></li>
+    <li><a href="index.html" style="color:var(--gold)">Lessons</a></li>
+    <li><a href="../../homepage.html">Home</a></li>
+  </ul>
+</nav>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Hour House · Newark, NJ · Adult ESL · 2026</div>
+  <h1>Lessons &amp; Assignments</h1>
+  <div class="hero-sub">Reading the world in two languages at once</div>
+  <div class="gold-rule"></div>
+  <p class="hero-desc">Each lesson is a 120-minute B2–C1 unit pairing a piece of real news, a piece of real history, and a thread from the AXLE / Principia Orthogona framework. Students leave with vocabulary, grammar, and a story worth carrying home. Designed for adult learners at <strong>Hour House</strong>, 229 Ballantine Pkwy, Newark, NJ.</p>
+</div>
+<!-- MAIN -->
+<div class="container">
+  <!-- Intro strip -->
+  <div class="intro-strip">
+    <h2>How these lessons work</h2>
+    <p>Each lesson follows the <em>CAELA Framework for Effective Lesson Planning for Adult English Language Learners</em>: a seven-stage arc from warm-up to application, with explicit vocabulary, grammar focus, listening and reading inputs, and structured speaking and writing outputs. The companion side of each lesson links to the corresponding chapter in the <em>Principia Orthogona</em> series — so a learner who wants to go further into the science, mathematics, or history behind the lesson has a clear next door to walk through. Every lesson is free to read on this page; the deeper companion texts live in the membership at <a href="https://g6llc.gumroad.com" target="_blank">g6llc.gumroad.com</a>.</p>
+  </div>
+  <!-- Lessons grid -->
+  <div class="section-title">Current lessons</div>
+  <div class="section-rule"></div>
+  <div class="lessons-grid">
+    <!-- LESSON 01 -->
+    <div class="lesson-card">
+      <div class="lesson-card-header">
+        <span class="lesson-card-num">Lesson 01</span>
+        <span class="lesson-card-meta">B2 · multi-lesson unit</span>
+      </div>
+      <div class="lesson-card-body">
+        <h2>The Vitruvian Approximation</h2>
+        <div class="lesson-card-sub">From the Rhind Papyrus to Da Vinci — 3,500 years of measuring with the body</div>
+        <p class="lesson-card-desc">A multi-lesson unit on how human beings have used the body — and the shapes the body makes — to measure the world. Students enter through Leonardo's <em>Vitruvian Man</em>, the famous figure inscribed in a circle and a square, and discover that the same circle-and-square question was answered three thousand years earlier in the <strong>Rhind Mathematical Papyrus</strong> (Egypt, c. 1650 BCE), which gives the area of a circle as the square on 8/9 of its diameter. Vocabulary work on proportion and approximation; grammar on comparatives, superlatives, and the language of estimation ("<em>about</em>," "<em>roughly</em>," "<em>nearly</em>"). The companion paper — <em>The Vitruvian Approximation</em> (Nogueira Grossi, 2026) — proves the Rhind formula as one G-cycle of the C→K→F→U contact-mechanics operator chain: a rational circle of diameter <em>d</em> becomes a rational square of area (8d/9)², with the central statement carried in Lean&nbsp;4.</p>
+        <div class="lesson-card-tags">
+          <span class="tag">History of Art</span>
+          <span class="tag">History of Mathematics</span>
+          <span class="tag">Rhind Papyrus</span>
+          <span class="tag">Vitruvian Man</span>
+          <span class="tag">Comparatives</span>
+          <span class="tag">Estimation</span>
+          <span class="tag gold">B2</span>
+        </div>
+        <div class="lesson-card-companions">
+          <a href="https://doi.org/10.5281/zenodo.19984521" target="_blank" title="The Vitruvian Approximation — Zenodo concept DOI (always resolves to latest version, currently v1 May 2026)">📜 Zenodo deposit</a>
+          <a href="https://github.com/TOTOGT/book3-starter/blob/main/assignments/Lessons/Vitruvian.lean" target="_blank" title="Vitruvian.lean — verbatim Lean 4 code from §6 of the paper. Two proved theorems (rhind_recovery for d=9, uniform_formula for all d∈ℚ₊) and a vacuous `True := trivial` placeholder for Conjecture 5.4 per Axiom 9 (Honest Incompleteness).">⚙ Vitruvian.lean</a>
+          <a href="../../chapters.html" title="AXLE chapter index">∾ AXLE thread</a>
+          <a href="https://en.wikipedia.org/wiki/Rhind_Mathematical_Papyrus" target="_blank" title="Rhind Mathematical Papyrus — B2-readable Wikipedia overview (stopgap; swap for a curated reading or British Museum EA10057 facsimile when ready)">𓂀 Rhind Papyrus reading</a>
+        </div>
+      </div>
+      <div class="lesson-card-footer">
+        <a class="lesson-card-link" href="lesson1.html">Open lesson →</a>
+        <span class="lesson-card-source">Companion: AXLE / dimensional approximation</span>
+      </div>
+    </div>
+    <!-- LESSON 02 -->
+    <div class="lesson-card">
+      <div class="lesson-card-header">
+        <span class="lesson-card-num">Lesson 02 · NEW</span>
+        <span class="lesson-card-meta">B2–C1 · 120 min</span>
+      </div>
+      <div class="lesson-card-body">
+        <h2>The Galilean Confluence</h2>
+        <div class="lesson-card-sub">Galileo's margins in Ptolemy's <em>Almagest</em> — Florence, 2026</div>
+        <p class="lesson-card-desc">A current-events lesson built around the January 2026 discovery by historian Ivan Malara of Galileo's own handwritten notes in a 1551 copy of Ptolemy's <em>Almagest</em>. Students watch a 2-minute WTVG news segment, read a Smithsonian feature, build a 2,000-year timeline, and practise the past perfect — then write their own "marginalia" about an idea they once believed and have since outgrown.</p>
+        <div class="lesson-card-tags">
+          <span class="tag">History of Science</span>
+          <span class="tag">Archaeology of Ideas</span>
+          <span class="tag">Past Perfect</span>
+          <span class="tag">Listening + Reading</span>
+          <span class="tag gold">B2–C1</span>
+        </div>
+        <div class="lesson-card-companions">
+          <a href="https://doi.org/10.5281/zenodo.19379385" target="_blank" title="Principia Orthogona Vol. IV / GTCT T1 — Atratores Helicoidais em 3-Variedades de Contato (Zenodo, open access)">📜 Zenodo · Vol. IV</a>
+          <a href="https://github.com/TOTOGT/AXLE/blob/main/lean/Crystal/gtct_t1.lean" target="_blank" title="GTCT T1 Lean 4 source — lives next to separation_theorem.lean, regeneration_loop_invariant.lean, and the Gronwall family in AXLE/lean/Crystal/. Pedagogical walkthrough: Atratores Session 3.">⚙ Lean source · gtct_t1.lean</a>
+          <a href="https://grossi-ops.github.io/Atratores/chE-gtct.html" target="_blank" title="GTCT Vol. IV — Chapter E (English, live on the Atratores GitHub Pages site)">∾ Chapter E · GTCT</a>
+          <a href="https://www.youtube.com/watch?v=TOi2zyxNwKc" target="_blank" title="WTVG 13 — Moment of Science (Apr 2026, Toledo, OH)">🎧 WTVG news clip</a>
+        </div>
+      </div>
+      <div class="lesson-card-footer">
+        <a class="lesson-card-link" href="lesson2.html">Open lesson →</a>
+        <span class="lesson-card-source">Companion: GTCT Vol. IV · Ch. E</span>
+      </div>
+    </div>
+    <!-- COMING SOON 03 -->
+    <div class="lesson-card ghost">
+      <div class="lesson-card-header">
+        <span class="lesson-card-num">Lesson 03</span>
+        <span class="lesson-card-meta">coming soon</span>
+      </div>
+      <div class="lesson-card-body">
+        <h2>The Saturn Hexagon</h2>
+        <div class="lesson-card-sub">Geometry from a place that has no geometers</div>
+        <p class="lesson-card-desc">A lesson on the strange six-sided cloud pattern at Saturn's north pole — discovered by Voyager, confirmed by Cassini — and what it teaches us about how shape emerges in fluids. Vocabulary: <em>vortex, latitude, rotation, anomaly</em>. Grammar: passive voice for scientific description.</p>
+        <div class="lesson-card-tags">
+          <span class="tag">Planetary Science</span>
+          <span class="tag">Passive Voice</span>
+          <span class="tag gold">B2–C1</span>
+        </div>
+      </div>
+      <div class="lesson-card-footer">
+        <span class="lesson-card-link" style="color:#888;">Coming soon</span>
+        <span class="lesson-card-source">Companion: AXLE / Saturn hexagon</span>
+      </div>
+    </div>
+  </div>
+  <!-- Fundraiser -->
+  <div class="fundraiser">
+    <h3>🏠 Support Hour House — Newark, NJ</h3>
+    <p>Hour House is an adult English language learning programme at 229 Ballantine Pkwy, Newark, NJ 07104.<br>Help us keep the doors open for immigrant and refugee learners in our community.</p>
+    <p>
+      <a href="https://g6llc.gumroad.com" target="_blank" style="display:inline-block; margin: 0.3rem 0.4rem;">📖 Buy the Membership — g6llc.gumroad.com</a><br>
+      <a href="https://www.ebay.com/str/principiaorthogona" target="_blank" style="display:inline-block; margin: 0.3rem 0.4rem;">🛒 Buy the Book — Principia Orthogona Store on eBay</a>
+    </p>
+  </div>
+  <!-- Copyright strip -->
+  <div class="copyright-strip">
+    © 2026 Pablo Nogueira Grossi / Hour House · 229 Ballantine Pkwy, Newark, NJ 07104 ·
+    Series DOI: <a href="https://doi.org/10.5281/zenodo.19117400" target="_blank">doi.org/10.5281/zenodo.19117400</a><a class="doi-badge" href="https://doi.org/10.5281/zenodo.19117400" target="_blank">10.5281/zenodo.19117400</a> ·
+    CC BY-NC-ND 4.0 · Lessons designed using the CAELA Framework for Adult English Language Learners
+  </div>
+</div><!-- /container -->
+<footer>
+  <div>© 2026 Pablo Nogueira Grossi / G6 LLC · Newark NJ · ORCID 0009-0000-6496-2186</div>
+  <div style="margin-top:0.4rem;">Principia Orthogona · AXLE v6.1 · <a href="https://github.com/TOTOGT/AXLE" target="_blank">github.com/TOTOGT/AXLE</a></div>
+</footer>
+</body>
+</html>
