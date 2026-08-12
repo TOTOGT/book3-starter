@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pierre et Mademoiselle — Limited Series</title>
+<meta name="description" content="In 1665 the greatest mathematician in Europe proved that a man could stop existing. A limited series. French–Brazilian co-production.">
+<meta property="og:title" content="Pierre et Mademoiselle — Limited Series">
+<meta property="og:description" content="In 1665 the greatest mathematician in Europe proved that a man could stop existing. It was the only theorem he ever tested on himself.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --bg:#0b0b0d; --bg2:#111114; --card:#151519; --line:#26262c;
+  --txt:#e8e6e1; --dim:#8f8d88; --faint:#5d5b58; --gold:#c9a84c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.serif{font-family:Georgia,'Times New Roman',serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+
+/* ── hero ── */
+header{min-height:88vh;display:flex;flex-direction:column;justify-content:center;
+  padding:70px 28px 60px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+header::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 22% 18%,rgba(201,168,76,.11),transparent 58%)}
+.hin{max-width:1000px;margin:0 auto;width:100%;position:relative;z-index:1}
+.kick{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
+h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(46px,8.5vw,104px);line-height:.98;letter-spacing:-.02em}
+h1 em{color:var(--gold);font-style:italic}
+.rule{width:70px;height:1px;background:var(--gold);margin:34px 0}
+.log{font-family:Georgia,serif;font-size:clamp(19px,2.4vw,27px);line-height:1.45;max-width:730px;color:#d8d5cf}
+.log b{color:var(--gold);font-weight:400}
+.meta{margin-top:44px;font-size:12px;letter-spacing:.11em;color:var(--faint);line-height:2.1;text-transform:uppercase}
+.cta{margin-top:46px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 30px;border:1px solid var(--gold);color:var(--gold);
+  font-size:11.5px;letter-spacing:.19em;text-transform:uppercase;transition:.18s}
+.btn:hover{background:var(--gold);color:#0b0b0d}
+.btn.solid{background:var(--gold);color:#0b0b0d}
+.btn.solid:hover{filter:brightness(1.12)}
+.btn.ghost{border-color:var(--line);color:var(--dim)}
+.btn.ghost:hover{background:var(--card);color:var(--txt);border-color:var(--dim)}
+
+/* ── sections ── */
+section{padding:82px 0;border-bottom:1px solid var(--line)}
+h2{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:36px;font-weight:600}
+.lede{font-family:Georgia,serif;font-size:clamp(21px,2.6vw,30px);line-height:1.45;max-width:820px;color:#ddd9d2}
+.lede + p{margin-top:24px}
+p{color:var(--dim);max-width:760px;margin-bottom:16px}
+p strong{color:var(--txt);font-weight:600}
+.big{color:var(--txt)}
+
+/* ── materials ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);padding:28px;transition:.18s;display:block}
+.card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.card .n{font-size:10px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+.card h3{font-family:Georgia,serif;font-weight:400;font-size:22px;margin:12px 0 9px;color:var(--txt)}
+.card p{font-size:14px;color:var(--dim);margin:0}
+.card .go{margin-top:16px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+.card:hover .go{color:var(--gold)}
+
+/* ── truth strip ── */
+.truth{display:grid;grid-template-columns:104px 1fr;gap:2px 22px;padding:15px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.truth:last-child{border-bottom:0}
+.truth .y{font-size:14px;color:var(--gold);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.truth .d{font-size:15px;color:var(--dim)}
+.truth .d b{color:var(--txt);font-weight:600}
+
+/* ── chapters ── */
+.ch{display:grid;grid-template-columns:38px 1fr auto;gap:20px;padding:15px 4px;
+  border-bottom:1px solid var(--line);align-items:baseline;transition:.15s}
+.ch:hover{background:var(--bg2);padding-left:12px;padding-right:12px}
+.ch .no{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums}
+.ch .t{font-family:Georgia,serif;font-size:19px;color:var(--txt)}
+.ch .w{font-size:12.5px;color:var(--faint);text-align:right;font-style:italic;white-space:nowrap}
+@media(max-width:640px){.ch{grid-template-columns:30px 1fr}.ch .w{display:none}}
+
+.note{border-left:2px solid var(--gold);padding:4px 0 4px 22px;margin:26px 0;max-width:780px}
+.note p{color:#c3c0ba;margin:0}
+
+footer{padding:66px 0 84px}
+.fgrid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+@media(max-width:640px){.fgrid{grid-template-columns:1fr}}
+.fname{font-family:Georgia,serif;font-size:27px;color:var(--txt)}
+.fdet{font-size:13.5px;color:var(--dim);line-height:2;margin-top:12px}
+.fdet a:hover{color:var(--gold)}
+.fine{font-size:11px;color:var(--faint);letter-spacing:.06em;text-align:right;line-height:2}
+@media(max-width:640px){.fine{text-align:left}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hin">
+    <div class="kick">Limited Series · 8 Episodes · Sample Pages Available</div>
+    <h1>Pierre <em>et</em><br>Mademoiselle</h1>
+    <div class="rule"></div>
+    <div class="log">In 1665 the greatest mathematician in Europe <b>proved that a man could stop existing.</b> It was the only theorem he ever tested on himself.</div>
+    <div class="meta">
+      Period drama · French, Portuguese, Tupi<br>
+      France &amp; Brazil · A treaty co-production<br>
+      Based on the true and documented death of Pierre de Fermat
+    </div>
+    <div class="cta">
+      <a class="btn solid" href="reader.html">Read the first 50 pages</a>
+      <a class="btn" href="pierre-et-mademoiselle-series-bible.html">Series bible</a>
+      <a class="btn ghost" href="#materials">All materials</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>The premise</h2>
+    <div class="lede">Pierre de Fermat died at Castres on 12 January 1665, two days after signing his last judgment. There is no grave anyone has ever opened.</div>
+    <p style="margin-top:26px">Twelve years earlier, during the plague at Toulouse, a colleague wrote to a Dutch scholar announcing Fermat's death — and withdrew it in his next letter. <strong>Fermat spent twelve years knowing something nobody else in Europe knew: that a death is trivially easy to publish, and that people are eager to believe one.</strong></p>
+    <p>In 1665 he petitions for a commission to inspect French interests in Grão-Pará and Maranhão — the worst posting in the French imagination. Thirty years on the bench; nobody asks why. He converts a fortune into three ships of water buffalo, because a dead man cannot carry silver past a customs officer. And at Versailles, a woman the king has stopped admiring from a distance leaves in four days instead of the six weeks his arithmetic required.</p>
+    <p>Five months later a reef takes the ship. The crew, who worked out what the clerk was in month three and have resented pretending ever since, row away. The silver goes down. What comes up out of the flooding hold is the one cargo everyone told him not to buy.</p>
+    <div class="note"><p class="serif" style="font-size:18px">He loses the asset he counted, and is saved by the asset he was mocked for.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Almost none of this is invented</h2>
+    <div class="lede">The world is documented. The plot is fiction. Every date below was verified in a single afternoon and can be checked by anyone in the room.</div>
+    <div style="margin-top:34px;max-width:860px">
+      <div class="truth"><span class="y">1612</span><span class="d">Frenchmen found <b>São Luís</b> as the seat of <i>la France Équinoxiale</i>, naming it for their king</span></div>
+      <div class="truth"><span class="y">1615</span><span class="d">Portugal expels the French — and <b>keeps the French name</b>, which the city still carries</span></div>
+      <div class="truth"><span class="y">1632</span><span class="d">The Jesuits <b>ban the teaching of indivisibles</b>. The same year, Galileo is summoned to Rome</span></div>
+      <div class="truth"><span class="y">1641</span><span class="d">The Dutch take São Luís with nineteen ships. Expelled 1644. <b>Both occupations leave children</b></span></div>
+      <div class="truth"><span class="y">1653</span><span class="d">Fermat catches plague. <b>A colleague announces his death, then retracts it</b></span></div>
+      <div class="truth"><span class="y">1654</span><span class="d">Recife's <b>Kahal Zur Israel</b> — the first synagogue in the Americas — is abandoned as Portugal returns</span></div>
+      <div class="truth"><span class="y">1661</span><span class="d">On Pentecost Sunday the colonists of São Luís <b>drag the Jesuits from their cells</b> and ship them to Lisbon</span></div>
+      <div class="truth"><span class="y">1665</span><span class="d"><b>Fermat dies at Castres.</b> His son inherits his offices. Vieira is in an Inquisition cell at Coimbra</span></div>
+      <div class="truth"><span class="y">1666</span><span class="d">Descartes' body crosses Europe for eight months and <b>arrives in Paris without its head</b></span></div>
+      <div class="truth"><span class="y">1670</span><span class="d">Clément-Samuel publishes his father's papers — including <b>the note about the margin</b></span></div>
+      <div class="truth"><span class="y">1890</span><span class="d">A ship bound for French Guiana wrecks off Cabo Maguari. <b>The buffalo swim ashore and populate Marajó</b></span></div>
+    </div>
+    <p style="margin-top:30px"><strong>One invention carries the series: the animal.</strong> Everything else is a room that existed and that nobody has set a story in.</p>
+    <div class="cta" style="margin-top:26px">
+      <a class="btn ghost" href="https://github.com/TOTOGT/book3-starter/blob/main/assignments/literature/FACT_AND_FICTION.md">The full verification ledger</a>
+    </div>
+  </div>
+</section>
+
+<section id="materials">
+  <div class="wrap">
+    <h2>Materials</h2>
+    <div class="grid">
+      <a class="card" href="reader.html">
+        <div class="n">Read first</div>
+        <h3>The first 50 pages</h3>
+        <p>Eighteen chapters in story order, paginated and printable, ending on <i>To be continued…</i></p>
+        <div class="go">Open reader →</div>
+      </a>
+      <a class="card" href="pierre-et-mademoiselle-series-bible.html">
+        <div class="n">Development</div>
+        <h3>Series bible</h3>
+        <p>Logline, premise, characters, eight-episode architecture, tone and comparables.</p>
+        <div class="go">Open bible →</div>
+      </a>
+      <a class="card" href="https://github.com/TOTOGT/book3-starter/blob/main/assignments/literature/FACT_AND_FICTION.md">
+        <div class="n">Research</div>
+        <h3>Fact &amp; fiction</h3>
+        <p>Every documented date with its source, and the short list of what is invented.</p>
+        <div class="go">Read ledger →</div>
+      </a>
+      <a class="card" href="https://github.com/TOTOGT/book3-starter/blob/main/assignments/literature/COPRODUCTION_AND_FUNDING.md">
+        <div class="n">Financing</div>
+        <h3>Co-production annex</h3>
+        <p>The 2017 ANCINE–CNC treaty, Brazilian instruments, and the UNESCO location case.</p>
+        <div class="go">Read annex →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Chapters</h2>
+    <div style="max-width:880px">
+      <div class="ch"><span class="no">01</span><span class="t">The Margin</span><span class="w">Toulouse, 1653</span></div>
+      <div class="ch"><span class="no">02</span><span class="t">The Commission</span><span class="w">Toulouse, 1665</span></div>
+      <div class="ch"><span class="no">03</span><span class="t">The Unfinished Cage</span><span class="w">Versailles, the night she left</span></div>
+      <div class="ch"><span class="no">04</span><span class="t">Ahead of the Arithmetic</span><span class="w">Six weeks becomes four days</span></div>
+      <div class="ch"><span class="no">05</span><span class="t">What the Plague Made Easy</span><span class="w">Toulouse, a borrowed body</span></div>
+      <div class="ch"><span class="no">06</span><span class="t">The Boy Who Carried Nothing</span><span class="w">La Rochelle, the night the ship sailed</span></div>
+      <div class="ch"><span class="no">07</span><span class="t">The Clerk Who Never Bathed</span><span class="w">The Atlantic, month three</span></div>
+      <div class="ch"><span class="no">08</span><span class="t">What the Sea Already Knew</span><span class="w">Month five, and then the reef</span></div>
+      <div class="ch"><span class="no">09</span><span class="t">The Small, Colorful Demons</span><span class="w">The sandbar, first light</span></div>
+      <div class="ch"><span class="no">10</span><span class="t">What the Cat Wanted</span><span class="w">The mangroves, past midday</span></div>
+      <div class="ch"><span class="no">11</span><span class="t">The Ceiling</span><span class="w">The edge of the trees, and the fort</span></div>
+      <div class="ch"><span class="no">12</span><span class="t">What the Name Was Still Doing There</span><span class="w">The first four days</span></div>
+      <div class="ch"><span class="no">13</span><span class="t">We Built It Last Week</span><span class="w">Told on a step, in the fifty-first year</span></div>
+      <div class="ch"><span class="no">14</span><span class="t">The Children of the Sea</span><span class="w">The north road, late</span></div>
+      <div class="ch"><span class="no">15</span><span class="t">O Conselheiro</span><span class="w">São Luís, the first year</span></div>
+      <div class="ch"><span class="no">16</span><span class="t">What the Margin Was For</span><span class="w">Under a tree, an audience of children</span></div>
+      <div class="ch"><span class="no">17</span><span class="t">What Arrived Without Its Head</span><span class="w">The night he told her</span></div>
+      <div class="ch"><span class="no">18</span><span class="t">What He Had No Idea He Had Done</span><span class="w">Epilogue</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why now, and why here</h2>
+    <div class="lede">São Luís is the only Brazilian capital founded by Frenchmen. Its historic centre is a UNESCO World Heritage Site — 220 hectares, four thousand buildings. The set exists and is protected in perpetuity.</div>
+    <p style="margin-top:26px">Brazil and France signed a bilateral audiovisual co-production agreement in <strong>2017</strong>, later extended from cinema to all audiovisual modalities. A treaty co-production is a national work in both countries.</p>
+    <p><strong>Most projects have to be bent into that shape. This one cannot be bent out of it.</strong> A French protagonist in French; a Brazilian setting in Portuguese; a city Frenchmen founded and Portugal kept; Tupinambá presence; and a mixed population that exists because of a French and a Dutch occupation. Remove either country and there is no story.</p>
+    <div class="note"><p class="serif" style="font-size:18px">The series ends where the world still is. Brazil holds 238 million cattle and still cannot tell a lender with confidence which of them exist — the problem Fermat notices in a street in 1666, unsolved in 2026.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="kick" style="margin-bottom:16px">Enquiries</div>
+        <div class="fname serif">Pablo Nogueira Grossi</div>
+        <div class="fdet">
+          G6 LLC · Newark, New Jersey<br>
+          <a href="mailto:g6llc@proton.me">g6llc@proton.me</a> · +1 (646) 342-3751<br>
+          ORCID 0009-0000-6496-2186<br>
+          Bilingual English / Portuguese
+        </div>
+      </div>
+      <div class="fine">
+        Draft materials · August 2026<br>
+        All rights reserved<br>
+        Not for circulation without permission
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
