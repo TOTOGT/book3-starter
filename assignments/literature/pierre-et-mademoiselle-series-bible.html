@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pierre et Mademoiselle — Series Bible</title>
+<style>
+:root{
+  --navy:#1a2744; --gold:#c9a84c; --cream:#faf7f0; --smoke:#f0ece4;
+  --ink:#16161a; --mute:#5a5a63; --rule:#d8d2c4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);
+  font:16px/1.65 Georgia,'Times New Roman',serif;}
+.wrap{max-width:900px;margin:0 auto;padding:0 28px 90px}
+.chrome{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+
+/* hero */
+header{background:var(--navy);color:var(--cream);padding:70px 28px 56px;margin-bottom:48px}
+header .inner{max-width:900px;margin:0 auto}
+.eyebrow{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.02;margin:0 0 6px;font-weight:400;letter-spacing:-.01em}
+.fr{font-style:italic;color:var(--gold)}
+.sub{font-size:clamp(15px,2vw,19px);color:#c9c6be;margin-top:18px;max-width:640px;font-style:italic}
+.gold-rule{height:2px;background:var(--gold);width:76px;margin:26px 0}
+.meta{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  font-size:12px;color:#9a9a94;letter-spacing:.05em;margin-top:30px;line-height:1.9}
+
+/* structure */
+section{margin:0 0 54px}
+h2{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);
+  padding-bottom:9px;border-bottom:2px solid var(--navy);margin:0 0 22px;font-weight:700}
+h3{font-size:23px;font-weight:400;margin:30px 0 8px;color:var(--navy)}
+p{margin:0 0 15px}
+.lede{font-size:20px;line-height:1.5}
+strong{color:var(--navy)}
+em.t{font-style:italic;color:var(--mute)}
+
+.logline{background:var(--navy);color:var(--cream);padding:34px 36px;font-size:21px;
+  line-height:1.5;font-style:italic;border-left:5px solid var(--gold)}
+.logline b{color:var(--gold);font-style:normal}
+
+.callout{background:var(--smoke);border-left:4px solid var(--gold);padding:20px 24px;margin:22px 0}
+.callout .lbl{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+  font-weight:700;margin-bottom:8px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media(max-width:680px){.two{grid-template-columns:1fr}}
+
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+th{background:var(--navy);color:var(--cream);text-align:left;padding:11px 13px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
+td{padding:11px 13px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:nth-child(even) td{background:#fdfbf6}
+td.ep{color:var(--gold);font-weight:700;white-space:nowrap;font-family:-apple-system,sans-serif;font-size:13px}
+
+.char{border-top:2px solid var(--navy);padding-top:14px;margin-bottom:26px}
+.char .nm{font-size:22px;color:var(--navy);margin-bottom:2px}
+.char .role{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);
+  font-weight:700;margin-bottom:9px}
+
+blockquote{margin:0;padding:22px 26px;background:#fff;border:1px solid var(--rule);
+  font-size:16px;line-height:1.72}
+blockquote p:last-child{margin-bottom:0}
+.excerpt{background:#fff;border:1px solid var(--rule);padding:30px 34px}
+.excerpt h4{font-family:-apple-system,sans-serif;font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);margin:0 0 4px;font-weight:700}
+.excerpt .ttl{font-size:26px;color:var(--navy);margin-bottom:2px}
+.excerpt .loc{font-style:italic;color:var(--mute);font-size:14px;margin-bottom:20px}
+.excerpt hr{border:0;border-top:1px solid var(--rule);margin:20px 0}
+
+.truth{display:grid;grid-template-columns:auto 1fr;gap:0 18px;align-items:baseline;
+  border-bottom:1px solid var(--rule);padding:11px 0;font-size:15px}
+.truth .yr{font-family:-apple-system,sans-serif;font-weight:700;color:var(--gold);font-size:15px}
+
+footer{border-top:2px solid var(--navy);padding-top:22px;margin-top:60px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  font-size:12px;color:var(--mute);line-height:1.9}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="eyebrow">Limited Series · 8 Episodes · Series Bible</div>
+    <h1>Pierre <span class="fr">et</span> Mademoiselle</h1>
+    <div class="gold-rule"></div>
+    <div class="sub">In 1665 the greatest mathematician in Europe proved that a man could stop existing. It was the only theorem he ever tested on himself.</div>
+    <div class="meta">
+      Created by Pablo Nogueira Grossi · G6 LLC, Newark, NJ<br>
+      Period drama · French &amp; Portuguese &amp; English · Brazil / France<br>
+      Based on the true and documented death of Pierre de Fermat
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>Logline</h2>
+  <div class="logline">
+    A dying magistrate who spent forty years proving that certain things <b>cannot exist</b> fakes his own death to smuggle a woman out of Louis XIV's court — and washes up, ruined, on a Brazilian shore, saved by the one cargo everyone told him not to buy.
+  </div>
+</section>
+
+<section>
+  <h2>The hook — none of the history is invented</h2>
+  <p class="lede">The series never contradicts the record. It reads the record as an alibi.</p>
+
+  <div class="truth"><span class="yr">1653</span><span>Fermat catches plague in Toulouse. A colleague, Bernard Medon, writes to the Netherlands announcing his death — then writes again a week later to retract it. <strong>This happened.</strong></span></div>
+  <div class="truth"><span class="yr">—</span><span>Fermat spends twelve years knowing something no one else in Europe knows: that a death is trivially easy to publish, and that people are eager to believe one.</span></div>
+  <div class="truth"><span class="yr">1665</span><span>He petitions for a commission to inspect French interests in Grão-Pará and Maranhão — the worst posting in the French imagination. Thirty years on the bench; nobody asks why.</span></div>
+  <div class="truth"><span class="yr">12 Jan 1665</span><span>Pierre de Fermat dies at Castres, two days after signing his final judgment. <strong>This is the official record. It is also the plan.</strong></span></div>
+  <div class="truth"><span class="yr">1612–1615</span><span>Frenchmen founded São Luís do Maranhão as the seat of <em>la France Équinoxiale</em>. The Portuguese expelled them in 1615 and kept the city — and the French name. <strong>It is still called São Luís today.</strong></span></div>
+
+  <div class="callout">
+    <div class="lbl">Why this matters in the room</div>
+    <p style="margin:0">Every date in this series is checkable. The show does not ask an audience to accept an alternate history — it asks them to notice that the actual history has a man-shaped hole in it, and to watch someone walk through.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Premise</h2>
+  <p>Pierre de Fermat is sixty-four, a magistrate of thirty years' standing in Toulouse, and the most formidable mathematical mind in Europe — a reputation built almost entirely on <strong>proving that things are impossible</strong>. No such integers. No such triangle. No solution, however long you search.</p>
+  <p>He is also keeping two sets of books. The first is visible: an old man tidying his affairs, a parcel of land here, a modest holding liquidated there, each transaction defensible alone. The second exists nowhere but in his head.</p>
+  <p><strong>Marie</strong> is at Versailles, and the king has stopped admiring her from a distance.</p>
+  <p>Fermat's plan is arithmetic: a commission to the far end of the world, a real departure, then — four months later, timed to a season when three parishes already have plague — a quiet, unremarkable death. Six weeks between her disappearance and his. Far enough apart that no clerk draws a line.</p>
+  <p><strong>She leaves in four days.</strong> The equation no longer balances, and he does the only thing his training ever taught him: he solves for the new unknown.</p>
+  <p>What follows is five months at sea with a woman dressed as a clerk, a crew that works out what she is by month five, a reef nobody charted, and a longboat pulling away from two people the sailors decided weeks ago deserved whatever the sea saw fit to do.</p>
+  <p>The silver goes down. Thirty years of quiet transactions, gone in a flooding hold.</p>
+  <p>What comes up out of the water beneath his hand is a water buffalo — <strong>one of four he bought in Lisbon with his own money, against every man's advice</strong>, because he had read they work flooded ground where an ox founders. The single largest line in the venture after the silver. The part everyone said would look foolish in a ledger.</p>
+  <div class="callout">
+    <div class="lbl">The thesis, in one line</div>
+    <p style="margin:0">He loses the asset he counted and is saved by the asset he was mocked for.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Three names</h2>
+  <p class="lede">The series is structured around what he is called, and by whom. Each name belongs to a world, and he cannot carry one into another.</p>
+
+  <table>
+    <thead><tr><th style="width:150px">Name</th><th style="width:120px">Who uses it</th><th>What it means</th></tr></thead>
+    <tbody>
+      <tr><td class="ep">Fermat</td><td>Europe. The record.</td><td>The surname on the correspondence, the theorems, the death notice at Castres. A man made entirely of paper — and the paper says he is finished.</td></tr>
+      <tr><td class="ep">Pierre</td><td>Marie. Only ever Marie.</td><td>The given name, and the only thing in the series that never changes. When she says it, no one is in the room. It is the one register in which he has no authority and no proof.</td></tr>
+      <tr><td class="ep">o Conselheiro</td><td>Brazil. Everyone.</td><td><em class="t">The Counsellor.</em> Nobody in Maranhão can pronounce the other one and nobody asks. They see an old man who was clearly some kind of magistrate somewhere, who is asked what he thinks and is usually right, and they give him the only title that fits.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="lbl">The joke he never explains</div>
+    <p style="margin:0"><em>Conselheiro</em> is not a promotion. It is the exact job he spent thirty years doing in Toulouse and could not wait to escape. He crosses an ocean, dies on paper, loses a fortune — and is handed back his own job title in another language by people who have no idea they are doing it.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Principal characters</h2>
+
+  <div class="char">
+    <div class="nm">Pierre de Fermat</div>
+    <div class="role">64 · Magistrate, Toulouse · The man who proves things cannot be</div>
+    <p>Dry, unhurried, funny in a register most people miss. He has spent a career delivering the least popular result in mathematics — <em class="t">no, there is nothing there</em> — and has built a personality out of being at peace with it. Mathematics was always the thing he did in the margins of his actual life, never the centre, which he suspects is the only theorem he ever got exactly backward.</p>
+    <p><strong>The arc:</strong> a man whose entire authority rests on proving non-existence discovers he has become a counterexample — alive under a death certificate, saved by an impossible animal, in love in a way he cannot prove in advance. He is forced, at sixty-four, to work in a register he has avoided his whole life: <em class="t">some things cannot be proven beforehand. They can only be attempted, and then lived.</em></p>
+  </div>
+
+  <div class="char">
+    <div class="nm">Marie</div>
+    <div class="role">The mademoiselle · In love with him · Officially dead of a fever</div>
+    <p>She is the one who loves first and says so least. At court she learned to fight any softness that could be read as weakness, and mostly wins, except at the corner of her mouth. She helped him choose which papers to burn.</p>
+    <p><strong>The arc:</strong> she moves before he does — leaves in four days when the plan said six weeks — and spends the series a half-step ahead of the arithmetic. She is not rescued. She is the variable he never solved for, and by the second season she is the one running the enterprise he cannot bring himself to count.</p>
+  </div>
+
+  <div class="char">
+    <div class="nm">Bertrand</div>
+    <div class="role">Ship's hand · Not a villain</div>
+    <p>He gives the thing its name — <em class="t">"There's a woman aboard"</em> — not out of malice but because sailors need every misfortune to have a shape. He is the study of how an ordinary man arranges, weeks in advance and without admitting it, to owe nothing when the moment comes.</p>
+  </div>
+
+  <div class="char">
+    <div class="nm">Mademoiselle</div>
+    <div class="role">Water buffalo · Cargo · The title character nobody expects</div>
+    <p>Bought in Lisbon out of Fermat's own pocket over universal objection. Three of her drowned in the hold. She got out. She has no opinion about any of this whatsoever, which is precisely the point — she swims because she can swim, which is exactly why he bought her.</p>
+  </div>
+
+  <div class="char">
+    <div class="nm">Louis XIV</div>
+    <div class="role">26 · Offscreen for most of it · Worse for that</div>
+    <p>Never the pursuer in a chase. He is a weather system. <em class="t">"I am tired of admiring things from a distance, Marie."</em> A king does not dig up graves; it isn't dignified. He will grieve her briefly, the way he grieves anything that was his and is now simply gone.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Season one — eight episodes</h2>
+  <table>
+    <thead><tr><th style="width:64px">Ep</th><th>Title</th><th>Turn</th></tr></thead>
+    <tbody>
+      <tr><td class="ep">101</td><td><strong>The Margin</strong><br><em class="t">Toulouse, 1653</em></td><td>Plague. Fermat is announced dead and un-dead within a week. He finds it very funny. He will remember for twelve years that people were eager to believe it.</td></tr>
+      <tr><td class="ep">102</td><td><strong>The Commission</strong><br><em class="t">Toulouse, 1665</em></td><td>Two sets of books. He asks for the worst posting in the world and gets it in an afternoon. Seniority is the only forgery that signs itself.</td></tr>
+      <tr><td class="ep">103</td><td><strong>Ahead of the Arithmetic</strong><br><em class="t">Versailles</em></td><td>The king summons her twice in a week. She leaves in four days. Fermat learns nine days late, in a letter that says almost nothing: <em class="t">the bird has left the garden ahead of the gardener's schedule.</em></td></tr>
+      <tr><td class="ep">104</td><td><strong>The Clerk Who Never Bathed</strong><br><em class="t">Bordeaux → open sea</em></td><td>Both officially dead. Marie in a clerk's shirt. Fermat discovers that a man who has arranged everything has arranged nothing about how to be near someone for five months.</td></tr>
+      <tr><td class="ep">105</td><td><strong>What the Sea Already Knew</strong><br><em class="t">Month five</em></td><td>Bertrand names it. Superstition hardens into consensus. The reef. The longboat — already decided, days before. The silver goes down and the buffalo comes up.</td></tr>
+      <tr><td class="ep">106</td><td><strong>What the Shore Was Called</strong><br><em class="t">Maranhão, 1666</em></td><td>A Portuguese city with a French name that nobody bothered to change. Real papers made out to a dead man — usable exactly once. He gives the guard "Pedro." She gives "Maria."</td></tr>
+      <tr><td class="ep">107</td><td><strong>The Le Mer Children</strong></td><td>He finds the only people in São Luís with no papers either. Blue-eyed, Dutch and French and Portuguese and Tupinambá, named for the sea because nobody would give them a father's name. Two officially dead Europeans are taken in by the one community the record does not account for.</td></tr>
+      <tr><td class="ep">108</td><td><strong>Wealthy in a Thing They Cannot Count</strong></td><td>Cattle walk through the town unremarked and no two men agree how many are inland. The Tupinambá make their terms: the herd is given into his keeping, they are spared — <em class="t">and they leave for Marajó.</em> The commission is spent on someone else. Season closes on the first line of a ledger nobody asked for.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>The Le Mer children</h2>
+  <p class="lede">The most historically defensible invention in the series, and the emotional centre of the back half.</p>
+
+  <p>São Luís was occupied twice by people who left. The French founded it in 1612 and were expelled at the end of 1615. The Dutch took it on <strong>25 November 1641</strong> — nineteen ships, two thousand men — and were driven out in <strong>1644</strong>, after three years.</p>
+  <p>Both occupations left children. Nobody stayed for them.</p>
+
+  <p>By 1666 they are a community with no name of its own, so the town gave them one: <strong>os Le Mer</strong> — of the sea, for the only thing anyone could say for certain about where they came from. Dutch and French and Portuguese and Tupinambá in every combination, and blue eyes surfacing unpredictably down the generations as the visible mark of a father nobody remembers.</p>
+
+  <div class="callout">
+    <div class="lbl">The arithmetic of two occupations</div>
+    <p style="margin:0"><strong>The French line</strong> is old — born around 1613–15, so <em>Fermat's own age</em> in 1666. Men and women in their fifties who have spoken French their whole lives to each other and to nobody else, waiting fifty-one years for a Frenchman who never came.</p>
+    <p style="margin:12px 0 0"><strong>The Dutch line</strong> is young — born 1641–44, so barely past twenty. They speak a Dutch inherited from grandmothers, in a city that has not seen a Dutchman since before they could walk.</p>
+  </div>
+
+  <p>So when Fermat arrives, he arrives into two relationships at once. <strong>The elders are his contemporaries</strong> — the strangest peers of his life, people his own age who speak his own language and have been abandoned by his own country. <strong>The young are his grandchildren</strong>, and he becomes, without ever deciding to, the grandfather of a generation whose actual grandfathers sailed away.</p>
+
+  <p>They are also, structurally, the only people in the New World who can understand what he is: <em class="t">someone the record does not account for.</em> Two officially dead Europeans with papers they cannot use, taken in by a community that never had papers at all.</p>
+
+  <p>And it is the cruellest thing in the season, because he cannot tell them. A man who has spent fifty years being the most famous name in European mathematics sits among the only people who would care, and must be Pedro.</p>
+
+  <h3>They all behave like children — and none of them are</h3>
+  <p>This is the note that makes them playable, and it should govern every scene they are in.</p>
+  <p>A Le Mer of fifty and a Le Mer of twenty are, socially, <strong>the same age</strong>, because none of them were ever inducted into adulthood by any of the systems that claim them. No baptismal record that counts, no schooling, no guild, no rank, no property, no marriage the church will register, no father's name to inherit. Every European institution in São Luís regards them, permanently and regardless of age, as <em>minors</em> — people who have not been entered into the book.</p>
+  <p>So they never learned to perform being adults. They tease, they interrupt, they laugh at the wrong moments, they are physically easy with each other, they are unimpressed by rank because rank has never once been extended to them. A grandmother of fifty-three will drop out of a serious conversation to chase something into the water. It reads, at first, as unseriousness.</p>
+
+  <div class="callout">
+    <div class="lbl">What it does to Fermat</div>
+    <p style="margin:0">He is a man <em>made entirely of institutions</em> — the bench, the court, the correspondence, thirty years of judgments, a name that means something in four countries. He arrives among people to whom none of that has ever applied, who have been free of it their whole lives, and who find him funny.</p>
+    <p style="margin:12px 0 0">And he has just spent a year making himself into exactly what they are: a person no book accounts for. They got there first, and without the paperwork. <strong>The difference is that he chose it at sixty-four and they were born into it — and they are better at it than he will ever be.</strong></p>
+  </div>
+
+  <h3>What they actually know, and who taught them</h3>
+  <p class="lede">Everything that keeps them alive came from the Indigenous side of the family. Nothing useful came from Europe.</p>
+  <p>The fathers left a language, a surname of sorts, and an eye colour. That is the entire European inheritance — three things that are of no use whatsoever in the forest.</p>
+  <p>The competence is Tupinambá, and it came down through mothers and grandmothers: which water is safe and which is not, what to do for a fever and what to do for a wound that has already gone bad, what is edible in which season, how far it is to somewhere by how long the light lasts, how to move through country that European clothing and European assumptions are actively hostile to. They can build, treat, feed and navigate. <strong>They are not scraping by. They are the competent ones, and everyone in São Luís knows it, and nobody writes it down.</strong></p>
+  <p>The series is precise about this and never sentimental. This is not mysticism or intuition; it is a body of tested, transmitted, specific knowledge, held by people the record does not credit, and it is presented with the same seriousness the show gives to Fermat's mathematics — because it is the same kind of thing.</p>
+
+  <div class="callout">
+    <div class="lbl">The two epistemologies — the show's real argument</div>
+    <p style="margin:0"><strong>Fermat wants to count the cattle.</strong> He believes a thing is not known until it is exact, and he has been right about that his entire life, and it is why he is the most formidable mind in Europe.</p>
+    <p style="margin:12px 0 0"><strong>The Le Mer do not count anything</strong>, and they can cross forty leagues of forest and arrive fed. They know the country the way you know a face — completely, unquantifiably, and without ever having taken a measurement.</p>
+    <p style="margin:12px 0 0">Neither is wrong. The series refuses to let either one win. But it is Fermat who has to learn the other, at sixty-four, from people who were never taught to read — and it is the only education of his life he cannot get from a letter.</p>
+  </div>
+</section>
+
+<section>
+  <h2>The bargain, and Marajó</h2>
+  <p>The Tupinambá were France's allies in 1612 — they helped build the fort. Fifty-one years later they have watched three European powers arrive, fight, and go, and they are under no illusions about the fourth.</p>
+  <p>They spare Fermat and Marie. The terms are precise, and they are not generous: <strong>the herd is given into his keeping</strong> — the surviving buffalo, and what has come of them — <strong>and he takes them, and himself, and her, and goes to Marajó.</strong> Out of Maranhão. Onto the island.</p>
+  <p>It is not exile and it is not a gift. It is a people who have learned exactly what a European costs, deciding what this one is worth and where he can be put.</p>
+
+  <div class="callout">
+    <div class="lbl">The payoff — and it is real</div>
+    <p style="margin:0 0 12px">Marajó today is <strong>the buffalo island</strong>. The herd is the largest in Brazil; the police there ride them.</p>
+    <p style="margin:0 0 12px">And the origin story Brazilians actually tell is <strong>a shipwreck</strong>. Around 1890, near Cabo Maguari, a cargo ship bound for <strong>French Guiana</strong> carrying water buffalo struck the sandbanks in a storm. The surviving animals <strong>swam ashore</strong> and populated the island. Some versions have escaped convicts from French Guiana instead. Documented importations follow in 1902 and 1906.</p>
+    <p style="margin:0"><strong>A French ship. A wreck. Buffalo swimming to Marajó.</strong> The series is not inventing a legend — it is writing the version that would have to be true first, two hundred and twenty-four years earlier. That is the ending: <em>um francês que ficou conhecido pelos búfalos que ele perdeu no Brasil.</em> A Frenchman remembered for the buffalo he lost.</p>
+  </div>
+
+  <p><strong>He is not remembered for the theorem.</strong> Not for the court, not for the correspondence, not for the margin. Europe keeps <em>Fermat</em> and puts him in a grave at Castres. Brazil keeps <em>o Conselheiro</em> and remembers a failure — the cargo that went overboard, the fortune that sank, the animals that got away from him and thrived. It is the least dignified possible legacy and by far the most alive, and it is exactly what a man who spent his life proving that things cannot exist deserves and could never have proved in advance.</p>
+</section>
+
+<section>
+  <h2>⚠ One correction before this goes out</h2>
+  <div class="callout" style="border-left-color:#a33">
+    <div class="lbl" style="color:#a33">Do not have them become the Marajoara</div>
+    <p><strong>The Marajoara are a real, documented pre-Columbian Indigenous civilisation</strong> — roughly <strong>400 to 1400 CE</strong>, centuries before 1666. They built the <em>tesos</em>, the great earthen mounds; they made the polychrome funerary ceramics that are Pará's most famous cultural inheritance; they had a hierarchical society with religious, political and productive divisions. The occupation sequence runs Ananatuba, Mangueiras, Formigas, Marajoara, Aruã.</p>
+    <p>Having two shipwrecked Europeans found that people would attribute the origin of an Indigenous civilisation to French castaways. It is off by a minimum of two hundred and fifty years, and a Brazilian audience — and any Marajoara descendant — would read it as erasure. A Netflix Brasil executive will flag it in the first meeting, and they will be right to.</p>
+    <p style="margin-bottom:0"><strong>The good news is you lose nothing.</strong> The lineage you want is the <em>buffalo</em>, and the buffalo lineage is already the real legend. Fermat and Marie go to Marajó, live among peoples who have been there for millennia — the <strong>Aruã</strong> are the phase present at contact — and what descends from them is not a people but a herd. That is a better ending anyway: he does not father a civilisation, he loses some livestock, and the livestock outlast every name he ever had.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Tone</h2>
+  <div class="two">
+    <div>
+      <h3>What it is</h3>
+      <p>Dry, warm, and quiet. The comedy is in the timing of a man who cannot stop being precise while everything around him refuses to hold still. Adult, unhurried, with an ocean in the middle of it.</p>
+      <p>The romance is <strong>the argument, not the ornament</strong>. She loves him first. He can prove almost anything and cannot prove this, and that is the whole engine.</p>
+    </div>
+    <div>
+      <h3>What it isn't</h3>
+      <p>Not a chase. Not a mathematician explaining mathematics to a room. Not a white man's adventure in the tropics — São Luís is a functioning city with its own people, its own arrangements, and no need of him.</p>
+      <p><strong>No anachronistic folklore.</strong> The <em class="t">bumba-meu-boi</em> — Maranhão's great festival of a bull that dies and returns, UNESCO-inscribed in 2019 — comes later, out of this cattle country. It is never staged in 1666. It is only, everywhere, about to exist.</p>
+    </div>
+  </div>
+  <p style="margin-top:20px"><strong>Comparables:</strong> the interiority and dry wit of <em>Master and Commander</em>; the institutional patience of <em>Wolf Hall</em>; the two-hander intimacy of <em>The Two Popes</em>; the landscape and moral weather of <em>Embrace of the Serpent</em>.</p>
+</section>
+
+<section>
+  <h2>Excerpt — Episode 106</h2>
+  <div class="excerpt">
+    <h4>From the draft</h4>
+    <div class="ttl">What the Shore Was Called</div>
+    <div class="loc">Maranhão, 1666</div>
+
+    <p>The animal put them down in shallow water and walked away without ceremony, up the mud and into the mangrove, and neither of them thought to thank it — which Fermat regretted for the rest of his life, not because he believed the beast would have understood, but because he had spent forty years insisting that a thing's not needing to be said was no argument against saying it.</p>
+    <p>Marie lay in six inches of warm brown water and did not move for a long time.</p>
+    <p>"Are you alive," Fermat said. It was not a question, quite. He had lost the shape of questions somewhere around the fourth hour.</p>
+    <p>"I appear to be." Her voice came out wrecked. "I had rather counted on you to have arranged otherwise."</p>
+    <p>"I arranged one death. I was not commissioned for two."</p>
+
+    <hr>
+
+    <p><em class="t">Later, on a borrowed floor:</em></p>
+    <p>He had bought it. Four of them, in fact, out of Lisbon — great patient grey things from the Portuguese trade, bought with his own money against the advice of every man he consulted, because he had read that they worked flooded ground where an ox drowned or foundered. It had been the single largest line in the venture after the silver.</p>
+    <p>Three had drowned in the hold. One had got out.</p>
+    <p>He lay very still.</p>
+    <p>It was not mercy. It was not providence. It was an animal with no opinion about him whatsoever, swimming because it could swim, which was precisely why he had bought it in the first place.</p>
+    <p><em>I paid for that</em>, he thought. <em>I paid for that with money I no longer have, on a judgement everyone told me was wrong, and it is the only thing I have left.</em></p>
+
+    <hr>
+
+    <p><em class="t">And in the morning, cattle in the street:</em></p>
+    <p>"They don't count them," Fermat said slowly.</p>
+    <p>"What?"</p>
+    <p>"There is no ledger. They buy and sell hides by the hundred, they speak of herds inland the way you or I would speak of weather, and not one man has said a number he could defend." Marie had heard his voice change before, twice, both times at a table in Toulouse with a letter from Paris open in front of him. "They are wealthy in a thing they cannot count."</p>
+    <p>"Is that bad?"</p>
+    <p>"It is not bad. It is <em>unproven</em>."</p>
+    <p>Marie set the cup down. "You said last night you'd become a counterexample."</p>
+    <p>"I did."</p>
+    <p>"Then be a useful one," she said. "Count the cows."</p>
+  </div>
+</section>
+
+<section>
+  <h2>Why now</h2>
+  <p>Brazil holds <strong>238 million cattle</strong> — twelve per cent more animals than it has people — and still cannot tell a lender with confidence which of them exist. The problem Fermat notices in a street in 1666 is unsolved in 2026, and it is currently the subject of a billion-dollar venture race.</p>
+  <p>The series is not about that. But it is the reason the last line of the pilot lands, and it is why this story is being told by someone who has spent the last year writing the technical papers on exactly that problem — a Brazilian researcher in formal verification and the ethics of algorithmic credit, working in both languages, with family in the cattle business.</p>
+  <p><strong>The show ends where the world still is.</strong></p>
+</section>
+
+<footer>
+  <strong>Pablo Nogueira Grossi</strong> · G6 LLC · Newark, NJ 07104, USA<br>
+  g6llc@proton.me · +1 (646) 342-3751 · ORCID 0009-0000-6496-2186<br>
+  Draft series bible · August 2026 · All rights reserved
+</footer>
+
+</div>
+</body>
+</html>
