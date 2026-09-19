@@ -81,6 +81,14 @@ Short list. This is the whole of it.
 
 1. **That the death was arranged.** The death is real, dated, and documented. The *faking* is the fiction — and the 1653 false report is what makes it plausible, because it establishes that Fermat had watched, at first hand, how easily and how completely Europe would believe he was gone.
 2. **Marie.** And Agnès, and Duval, and the carter.
+   ⚠️ **Duval is not Medon**, and the two must never be merged. **Bernard Medon** is real, is
+   named on the page in Part 1, and is a *conseiller au présidial de Toulouse* — a judicial
+   colleague, not a physician. His false report of Fermat's death is **1653**, and it is an
+   accident he had to withdraw a week later. **Duval** is invented: a physician of eleven
+   years' loyalty who finds Fermat a body in **1665**, on purpose. Medon is the proof from the
+   record that Europe will believe such a report; Duval is what it looks like when someone
+   reads that accident as a method. Medon's version needed a second letter to undo it; Duval's
+   was built so no second letter could ever be written.
 3. **The commission** to inspect French interests in Grão-Pará.
 4. **Three ships of buffalo in 1666.** The largest invention, and it is a **relocation, not a fabrication** — the real animals arrive by shipwreck, off a French-bound vessel, and swim ashore. The series writes the version that would have to be true first, 224 years earlier.
 5. **The voyage:** Bertrand, the crew, the reef, the abandonment.
@@ -108,3 +116,90 @@ The son gives the world the note about the space being too small to contain the 
 **The son published the silence. The father, elsewhere, was breaking it.** Neither ever knew.
 
 That is the last scene of the series, and it costs nothing to stage, because it is what happened.
+
+
+---
+
+## Descartes' remains — the trigger for Part 17, *What Arrived Without Its Head*
+
+Checked 29 August 2026. **This material must not appear in a printed ledger before Part 17.**
+It is the mechanism of the whole premise; printing it beside Part 3 gives the shape away
+fourteen weeks early, and it would sit two weeks ahead of Part 5, where the death is faked.
+
+- **1650** — Descartes dies at Stockholm, in the service of Queen Christina.
+- **1666** — the year after Fermat's death, the remains are exhumed and carried to France
+  for reburial. The **chevalier de Terlon**, who negotiated the exhumation, took a finger
+  from the body — openly, as a souvenir. The chapter has this right.
+- **The skull did not travel with the body.** One said to be his surfaced later at a Swedish
+  auction, passed through the chemist **Berzelius**, and is held today at the
+  **Musée de l'Homme** in Paris.
+- ⚠️ **Accounts disagree** on when the head was taken — in Sweden before the journey, or in
+  Paris during the Revolutionary transfers to the Panthéon and Saint-Germain-des-Prés. And
+  specialists dispute whether the Paris skull is Descartes' at all; some doubt the
+  Revolution-era remains were his either. **Carry the disagreement; do not choose.** The
+  chapter already does this correctly — the trader reports rumours *as rumours*, including
+  the one that matters ("that it was not him at all").
+- **No story of this kind attaches to Fermat's remains.** He was buried at Castres; the
+  family tomb is at the **couvent des Augustins** in Toulouse, where a bust by
+  **François Lucas** went into the church choir in **1782**. The Occitan sources that pick
+  over Fermat's record dispute his *birth* date, from the funeral plaque — not his body.
+- What *is* attested about Fermat being wrongly dead is the 1653 report already recorded
+  above: **Bernard Medon to Nicolas Heinsius**, announcing the death and withdrawing it in
+  the next letter. Independent corroboration: MacTutor gives the retraction as
+  *"I informed you earlier of the death of Fermat. He is alive, and we no longer fear for
+  his health, even though we had counted him among the dead a short time ago."*
+  That belongs with **Part 5**, *What the Plague Made Easy*, and nowhere earlier.
+
+**Continuity note.** In canon there is no body of Fermat's to be missing a head. Duval used a
+carter's, wrapped and weighted as a plague death and committed to the sea well clear of port —
+"no grave anyone can open," which Fermat calls the best decision in the whole design. The head
+is not a constraint he planned around. It is a fear that arrives sixteen months later, from a
+Dutch trader under the tamarind, and its function is to put *the shape* into the world.
+
+---
+
+## Standing ruling on place — 2026-09-19
+
+Settled because the serial had been using both cities for the death, and the
+documented death is the one fact the whole premise rests on.
+
+- **Toulouse is where he lives and plots.** Thirty years on the bench of its
+  Parlement. The carriage in Part 5 leaves from there.
+- **Castres is where he dies**, on **12 January 1665**, two days after signing
+  his last judgment. The *chambre de l'édit* sat at Castres and he was there on
+  circuit. That is the record, and it is also the plan — a man who dies away
+  from his own household is seen by fewer people who know his face, which is
+  the mechanism Part 5 is built on.
+- **Nothing in the serial says he died, or was reported dead, in Toulouse.**
+- **Marie is at Versailles** until she leaves. She is never in Toulouse.
+  Toulouse is the place she writes to, and in Part 4 does not write to.
+
+What was corrected, and where it had spread:
+
+| file | was | now |
+|---|---|---|
+| `what_the_plague_made_easy.md` | Duval: "still alive in Toulouse" | "still alive in France" |
+| `fermat_commission.md` | "reported dead in Toulouse" | "reported dead at Castres" |
+| `marie_flight.md` ×2 | "died in Toulouse" | "died at Castres" |
+| `AXLE/Journal/vol7.html` | the Part 2 typeset copy carried the old line | corrected |
+| `AXLE/Journal/vol9.html` ×2 | the Part 4 typeset copy carried the old line | corrected |
+| `AXLE/Journal/vol10.html` | the Part 5 typeset copy carried the old line | corrected |
+| `reader.html` | generated — rebuilt from the corrected sources | rebuilt |
+
+Part 1 and one line of Part 2 had always said Castres, which is why the split
+was worth settling rather than choosing: the minority was the record.
+
+**`continuity_check.py` enforces this.** It refuses the banned phrasings across
+the canon and across the journal's typeset copies, and — the part that matters
+more — it checks that each published instalment still contains its source
+paragraphs verbatim. The typeset copies are set from these files and are never
+composed at the desk; when the sources were corrected here, three already
+published pages still carried the old city, which is how a rule that lives only
+in a note fails.
+
+The script found three false positives against itself on its first run, all in
+its own normalisation: straight quotes against curly ones, markdown asterisks
+against a stripped `<em>`, and its own statement of the Duval-is-not-Medon rule
+read as a breach of it. Fixed in the script rather than worked around in the
+prose.
+

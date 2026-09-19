@@ -14,7 +14,7 @@ The carriage that came for him that night was shuttered on every side, the drive
 
 Fermat watched from an upper room as the carter's body — wrapped, weighted at the shoulders in the manner Duval swore was standard practice for a plague death, no different from any of the eleven such bodies that street had already surrendered that month — was carried down and laid inside. He did not know the man's face. He had made a point, in the last hour, of never learning it, on the theory that a stranger's death should not be permitted to feel like anything other than what it was: a terrible, useful accident that he was about to make use of.
 
-"You understand," Duval said quietly, "once this leaves the house, there is no version of events where you are still alive in Toulouse. I cannot call it back."
+"You understand," Duval said quietly, "once this leaves the house, there is no version of events where you are still alive in France. I cannot call it back."
 
 "I am aware of what an irreversible operation looks like, Duval. I have spent my life proving which ones exist."
 

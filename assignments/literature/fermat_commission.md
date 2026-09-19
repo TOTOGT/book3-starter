@@ -54,7 +54,7 @@ She was quiet for a moment. "You've thought about this longer than you've let me
 
 ---
 
-They did not speak, after that, of what would happen if it failed — if a bribed official grew greedy, if a ship's manifest was checked too closely, if some clerk in Lisbon noticed that a French magistrate reported dead in Toulouse was, at the very same month, disembarking eight thousand miles away under a name that was almost, but not quite, his own.
+They did not speak, after that, of what would happen if it failed — if a bribed official grew greedy, if a ship's manifest was checked too closely, if some clerk in Lisbon noticed that a French magistrate reported dead at Castres was, at the very same month, disembarking eight thousand miles away under a name that was almost, but not quite, his own.
 
 Fermat had calculated the odds of every failure he could imagine, the way he calculated everything, and had arrived, in the end, at the only conclusion his life's work had ever really produced:
 

@@ -26,7 +26,7 @@ He read it twice, standing in his own study surrounded by the second set of book
 
 He did the only thing his training had ever taught him to do with an equation that no longer balanced: he solved for the new unknown.
 
-If she was already gone, already unaccounted for, already the subject of whatever quiet, urgent search a king mounts for something he has decided he wants and finds missing — then Fermat's own six weeks of careful invisibility were not a luxury anymore. They were a liability. A magistrate who died in Toulouse *after* a woman went missing from Versailles was a coincidence. A magistrate who died in Toulouse two months after was a pattern, and patterns were the one thing his entire life's work had taught him to notice in other men's mistakes.
+If she was already gone, already unaccounted for, already the subject of whatever quiet, urgent search a king mounts for something he has decided he wants and finds missing — then Fermat's own six weeks of careful invisibility were not a luxury anymore. They were a liability. A magistrate who died at Castres *after* a woman went missing from Versailles was a coincidence. A magistrate who died at Castres two months after was a pattern, and patterns were the one thing his entire life's work had taught him to notice in other men's mistakes.
 
 He sent for his physician that same afternoon, and told him the fever had come early.
 
